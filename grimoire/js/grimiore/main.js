@@ -30,6 +30,20 @@ function main() {
       EnergyReqired: 2921.5
     }
   ]
+
+  const goodSpellBook = allSpells.filter(spell => !spell.IsEvil)
+  const evilSpellBook = allSpells.filter(spell => spell.IsEvil)
+
+  const goodSpells = goodSpellBook.map(spell => spell.Name).toString().split(",").join("\n")
+  const evilSpells = evilSpellBook.map(spell => spell.Name).toString().split(",").join("\n")
+
+
+
+  console.log("Good Book")
+  console.log(goodSpells)
+  console.log("")
+  console.log("Evil Book")
+  console.log(evilSpells)
 }
 
 main();
